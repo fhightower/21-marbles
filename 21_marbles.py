@@ -10,8 +10,6 @@ import logging
 
 import inflect
 
-inflector = inflect.engine()
-
 
 def init_parser():
     """Initialize the argument parser."""
@@ -54,6 +52,7 @@ def main():
     """."""
     logging.debug("started the main function")
     args = init_parser()
+    inflector = inflect.engine()
 
     MARBLE_COUNT = args.marbles
     AI = args.ai
@@ -83,14 +82,23 @@ def main():
 
     if MARBLE_COUNT == 1:
         if turn == args.player1:
-            print("Sorry {}, but there is only one marble left and you will have to take it.\nThat means {} is the winner.".format(args.player1, args.player2))
+            print("Sorry {}, but there is only one ".format(args.player1) +
+                  "marble left and you will have to take it.\nThat means " +
+                  "{} is the winner.".format(args.player2))
         else:
-            print("Sorry {}, but there is only one marble left and you will have to take it.\nThat means {} is the winner.".format(args.player2, args.player1))
+            print("Sorry {}, but there is only one ".format(args.player2) +
+                  "marble left and you will have to take it.\nThat means " +
+                  "{} is the winner.".format(args.player1))
     else:
         if turn == args.player1:
-            print("Sorry {}, but you took the last marble.\nThat means {} is the winner.".format(args.player2, args.player1))
+            print("Sorry {}, ".format(args.player2) +
+                  "but you took the last marble.\nThat means " +
+                  "{} is the winner.".format(args.player1))
         else:
-            print("Sorry {}, but you took the last marble.\nThat means {} is the winner.".format(args.player1, args.player2))
+            print("Sorry {}, ".format(args.player1) +
+                  "but you took the last marble.\nThat means " +
+                  "{} is the winner.".format(args.player2))
+
 
 if __name__ == '__main__':
     log_format = '%(asctime)s %(levelname)s: %(message)s'

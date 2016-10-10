@@ -83,21 +83,21 @@ def main():
     if MARBLE_COUNT == 1:
         if turn == args.player1:
             print("Sorry {}, but there is only one ".format(args.player1) +
-                  "marble left and you will have to take it.\nThat means " +
-                  "{} is the winner.".format(args.player2))
+                  "marble left and you will have to take it.\nThis means " +
+                  "{} is the WINNER.".format(args.player2.upper()))
         else:
             print("Sorry {}, but there is only one ".format(args.player2) +
-                  "marble left and you will have to take it.\nThat means " +
-                  "{} is the winner.".format(args.player1))
+                  "marble left and you will have to take it.\nThis means " +
+                  "{} is the WINNER.".format(args.player1.upper()))
     else:
         if turn == args.player1:
             print("Sorry {}, ".format(args.player2) +
-                  "but you took the last marble.\nThat means " +
-                  "{} is the winner.".format(args.player1))
+                  "but you took the last marble.\nThis means " +
+                  "{} is the WINNER.".format(args.player1.upper()))
         else:
             print("Sorry {}, ".format(args.player1) +
-                  "but you took the last marble.\nThat means " +
-                  "{} is the winner.".format(args.player2))
+                  "but you took the last marble.\nThis means " +
+                  "{} is the WINNER.".format(args.player2.upper()))
 
 
 if __name__ == '__main__':

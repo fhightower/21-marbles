@@ -8,6 +8,10 @@
 import argparse
 import logging
 
+import inflect
+
+inflector = inflect.engine()
+
 
 def init_parser():
     """Initialize the argument parser."""
@@ -67,13 +71,15 @@ def main():
             print("\n{}'s turn...".format(args.player2.upper()))
             turn = args.player1
 
-        print("{} marbles remaining".format(MARBLE_COUNT))
+        print("{} ".format(MARBLE_COUNT) +
+              "{} remaining".format(inflector.plural("marble", MARBLE_COUNT)))
 
         move = get_player_move(MARBLE_COUNT)
 
         MARBLE_COUNT -= move
 
-    print("")
+    print("\n{} ".format(MARBLE_COUNT) +
+          "{} remaining.\n".format(inflector.plural("marble", MARBLE_COUNT)))
 
     if MARBLE_COUNT == 1:
         if turn == args.player1:

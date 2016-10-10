@@ -82,9 +82,9 @@ def main():
             print("Sorry {}, but there is only one marble left and you will have to take it.\nThat means {} is the winner.".format(args.player2, args.player1))
     else:
         if turn == args.player1:
-            print("Sorry {}, but there is only one marble left and you will have to take it.\nThat means {} is the winner.".format(args.player2, args.player1))
+            print("Sorry {}, but you took the last marble.\nThat means {} is the winner.".format(args.player2, args.player1))
         else:
-            print("Sorry {}, but there is only one marble left and you will have to take it.\nThat means {} is the winner.".format(args.player1, args.player2))
+            print("Sorry {}, but you took the last marble.\nThat means {} is the winner.".format(args.player1, args.player2))
 
 if __name__ == '__main__':
     log_format = '%(asctime)s %(levelname)s: %(message)s'

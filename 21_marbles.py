@@ -67,10 +67,11 @@ def main():
             print("\n{}'s turn...".format(args.player2.upper()))
             turn = args.player1
 
+        print("{} marbles remaining".format(MARBLE_COUNT))
+
         move = get_player_move(MARBLE_COUNT)
 
         MARBLE_COUNT -= move
-        print("{} marbles remaining".format(MARBLE_COUNT))
 
     print("")
 

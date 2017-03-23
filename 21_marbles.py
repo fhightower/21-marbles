@@ -39,7 +39,7 @@ def get_player_move(marble_count):
             print("! Please enter 1, 2, or 3.")
         else:
             # make sure the desired move is 1, 2, or 3
-            if (desired_move > 0) and (desired_move < 4):
+            if (0 < desired_move < 4):
                 # make sure enough marbles to perform the desired move
                 if marble_count - desired_move < 0:
                     print("There are only {} marbles ".format(marble_count) +

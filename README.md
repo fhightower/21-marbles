@@ -24,5 +24,3 @@ optional arguments:
   -h, --help  show this help message and exit
   -a, --ai    if you want to play against an AI
 ```
-
-![I've lost my marbles...](https://raw.githubusercontent.com/fhightower/21-marbles-python/master/marbles.gif)

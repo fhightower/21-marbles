@@ -74,6 +74,7 @@ def main():
         args.player2 = AI_NAME
 
     turn = args.player1
+    move = 0
 
     while MARBLE_COUNT > 1:
         print("\n{}'s turn...".format(turn.upper()))
